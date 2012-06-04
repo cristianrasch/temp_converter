@@ -10,3 +10,9 @@ class ConversionFunctionsTest(unittest2.TestCase):
         
     def test_converts_celcius_to_farenheit(self):
         self.assertEqual(celcius_to_farenheit(0), 32)
+        
+    def test_rounds_temperature_conversions(self):
+        temp_in_celcius = farenheit_to_celcius(92)
+        self.assertEqual(temp_in_celcius, 33)
+        temp_in_fahrenheit = celcius_to_farenheit(33)
+        self.assertEqual(temp_in_fahrenheit, 91)
